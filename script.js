@@ -69,3 +69,11 @@ const generateShop = () => {
 };
 
 generateShop();
+
+// const cartBtn = document.querySelectorAll('.add-to-cart');
+
+// cartBtn.forEach(button => {
+// 	button.addEventListner('click', (e) => {
+// 		console.log(saad beta);
+// 	});
+// })

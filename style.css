@@ -91,3 +91,42 @@
 	margin-top: 50px;
 	font-size: 35px;
 }
+
+.pro-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+th {
+	background-color: #ccc;
+	text-align: left;
+	padding: 10px;
+}
+
+table {
+	width: 80%;
+	border-collapse: collapse;
+}
+
+table td input {
+	width: 70px;
+	padding: 10px;
+}
+
+td {
+	padding: 10px;
+}
+
+#product-info img {
+	width: 70px;
+}
+
+#product-info {
+	display: flex;
+	align-items: center;
+}
+
+#product-name {
+	padding-left: 50px;
+}
