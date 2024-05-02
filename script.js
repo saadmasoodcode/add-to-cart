@@ -52,28 +52,41 @@ const products = [
 const productsContainer = document.getElementById('products');
 
 const generateShop = () => {
-	return (productsContainer.innerHTML = products
-		.map((x) => {
-			let { id, image, name, price } = x;
-			return `
-         <div id=product-id-${id} class="card">
-            <img src="${image}" alt="Product Image">
-            <div class="card-content">
-                  <h2>${name}</h2>
-                  <p class="price">$ ${price}</p>
-                  <button class="add-to-cart">Add to Cart</button>
-            </div>
-         </div>`;
-		})
-		.join(''));
+	products.map((x) => {
+		let div1 = document.createElement('div');
+		div1.className = 'card';
+		productsContainer.appendChild(div1);
+
+		let img = document.createElement('img');
+		img.src = x.image;
+		div1.appendChild(img);
+
+		let div2 = document.createElement('div');
+		div2.className = 'card-content';
+		div1.appendChild(div2);
+
+		let h2 = document.createElement('h2');
+		h2.innerHTML = x.name;
+		div2.appendChild(h2);
+
+		let p = document.createElement('p');
+		p.innerHTML = `$ ${x.price}`;
+		p.className = 'price';
+		div2.appendChild(p);
+
+		let btn = document.createElement('button');
+		btn.innerHTML = 'Add to Cart';
+		btn.className = 'add-to-cart';
+		div2.appendChild(btn);
+	});
 };
 
 generateShop();
 
-// const cartBtn = document.querySelectorAll('.add-to-cart');
+const addToCartBtn = document.querySelectorAll('.add-to-cart');
 
-// cartBtn.forEach(button => {
-// 	button.addEventListner('click', (e) => {
-// 		console.log(saad beta);
-// 	});
-// })
+addToCartBtn.forEach((button) => {
+	button.addEventListener('click', (e) => {
+		console.log('Hello Saad');
+	});
+});
