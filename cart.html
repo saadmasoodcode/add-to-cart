@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=0" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -14,8 +14,7 @@
 		<title>Cart</title>
 	</head>
 	<body>
-		<nav class="navbar">
-			<div class="logo">
+		<!-- <nav class="navbar"><div class="logo">
 				<img src="/img/img/logo.png" alt="" />
 			</div>
 			<div class="manu">
@@ -27,12 +26,15 @@
 			<h2>Your Cart</h2>
 			<div class="pro-container">
 				<table>
-					<tr>
-						<th>Product</th>
-						<th>Quantity</th>
-						<th>Sub Total</th>
-					</tr>
-					<tr>
+					<thead>
+						<tr>
+							<th>Product</th>
+							<th>Quantity</th>th>Sub Total</th>
+						</tr>
+					</thead>
+					<tbody id="table-body">
+
+			  <!-- <tr>
 						<td>
 							<div id="product-info">
 								<img src="img/img/products/f1.jpg" alt="">
@@ -42,13 +44,13 @@
 								</div>
 							</div>
 						</td>
-						<td><input type="number" value="1"></td>
+						<td><input typ="number" td>
 						<td>Sub Total</td>
 					</tr>
+				</tbody>
 
-				</table>
-			</div>
-		</section>
+				</table>div>
+		</section> -->
 		<script src="script.js"></script>
 	</body>
 </html>
