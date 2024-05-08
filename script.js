@@ -52,6 +52,7 @@ products = [
 let userCart = [];
 
 const productsContainer = document.getElementById('products');
+const cartItemCount = document.getElementById('cart-item-count');
 
 function onAddToCart(event) {
 	const productID =
@@ -65,6 +66,7 @@ function onAddToCart(event) {
 		if (product) {
 			userCart.push(product);
 			localStorage.setItem('userCart', JSON.stringify(userCart));
+			cartIconCount();
 		}
 	}
 }
@@ -110,10 +112,9 @@ function getCartFromLocalStorage() {
 
 getCartFromLocalStorage();
 
-// const addToCartBtn = document.querySelectorAll('.add-to-cart');
-
-// addToCartBtn.forEach((button) => {
-// 	button.addEventListener('click', (e) => {
-// 		// console.log('Hello Saad');
-// 	});
-// });
+function cartIconCount() {
+	let cartCount = userCart.length;
+	console.log(cartCount);
+	cartItemCount.innerHTML = cartCount;
+}
+cartIconCount();
