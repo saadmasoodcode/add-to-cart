@@ -167,3 +167,13 @@ td {
 	background-color: #cecece57;
 	cursor: pointer;
 }
+
+.manu {
+	display: flex;
+	align-items: center;
+}
+
+.cart-icon {
+	display: flex;
+	gap: 5px;
+}
